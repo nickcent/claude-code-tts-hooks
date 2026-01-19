@@ -67,7 +67,7 @@
       "note": "Voice for Claude's responses"
     },
     "system": {
-      "kokoro_voice": "af_sky",
+      "kokoro_voice": "af_nicole",
       "elevenlabs_voice_id": "EXAVITQu4vr4xnSDxMaL",
       "openai_voice": "nova",
       "macos_voice": "Samantha",

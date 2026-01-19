@@ -115,7 +115,7 @@ def main():
 
     # Load voice config
     voice_config = config.get("voices", {}).get("system", {})
-    kokoro_voice = voice_config.get("kokoro_voice", "af_sky")
+    kokoro_voice = voice_config.get("kokoro_voice", "af_nicole")
     speed = voice_config.get("speed", 1.2)
     macos_voice = voice_config.get("macos_voice", "Samantha")
 
