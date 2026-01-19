@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "session": {
+    "default_mode": "kokoro",
+    "show_dialog": true,
+    "dialog_timeout": 15
+  },
+  "providers": {
+    "kokoro": { "enabled": true },
+    "elevenlabs": { "enabled": true },
+    "openai": { "enabled": true },
+    "macos": { "enabled": true }
+  },
+  "hooks": {
+    "session_start": {
+      "enabled": true,
+      "speak_announcement": true
+    },
+    "user_prompt_submit": {
+      "enabled": true,
+      "phrases": [
+        "Processing.", "Analyzing.", "Computing.",
+        "Understood.", "Confirmed.", "Executing."
+      ]
+    },
+    "stop": {
+      "enabled": true
+    },
+    "pre_compact": {
+      "enabled": true,
+      "announcements": [
+        "Memory optimization in progress.",
+        "Consolidating context data.",
+        "Archiving session history."
+      ]
+    }
+  },
+  "voices": {
+    "assistant": {
+      "kokoro_voice": "bm_george",
+      "elevenlabs_voice_id": "pNInz6obpgDQGcFmaJgB",
+      "openai_voice": "fable",
+      "macos_voice": "Alex",
+      "speed": 1.0,
+      "volume": 1.0,
+      "note": "British male voice for sophisticated tone"
+    },
+    "system": {
+      "kokoro_voice": "af_nova",
+      "elevenlabs_voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "openai_voice": "shimmer",
+      "macos_voice": "Victoria",
+      "speed": 1.3,
+      "volume": 0.7,
+      "note": "Fast female voice for quick acknowledgments"
+    }
+  },
+  "_voice_reference": {
+    "kokoro_voices": [
+      "af_alloy", "af_bella", "af_jessica", "af_nicole", "af_nova",
+      "af_river", "af_sarah", "af_sky",
+      "am_adam", "am_echo", "am_eric", "am_liam", "am_michael", "am_onyx",
+      "bf_alice", "bf_emma", "bf_lily", "bf_matilda",
+      "bm_daniel", "bm_fable", "bm_george", "bm_lewis", "bm_oliver", "bm_oscar"
+    ],
+    "openai_voices": ["alloy", "echo", "fable", "onyx", "nova", "shimmer"],
+    "elevenlabs_popular": {
+      "Rachel": "21m00Tcm4TlvDq8ikWAM",
+      "Bella": "EXAVITQu4vr4xnSDxMaL",
+      "Adam": "pNInz6obpgDQGcFmaJgB"
+    }
+  }
+}

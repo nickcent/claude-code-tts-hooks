@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "uv run $HOME/.claude/hooks/SessionStart/01-tts-init.py"
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "command": "uv run $HOME/.claude/hooks/UserPromptSubmit/01-acknowledge.py"
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "uv run $HOME/.claude/hooks/Stop/01-tts-response.py"
+      }
+    ],
+    "PreCompact": [
+      {
+        "type": "command",
+        "command": "uv run $HOME/.claude/hooks/PreCompact/01-announce.py"
+      }
+    ]
+  }
+}

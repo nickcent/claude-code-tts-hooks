@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "session": {
+    "default_mode": "off",
+    "show_dialog": true,
+    "dialog_timeout": 15
+  },
+  "providers": {
+    "kokoro": {
+      "enabled": true,
+      "model_dir": "~/.local/share/kokoro",
+      "note": "Download models with scripts/setup-kokoro.sh"
+    },
+    "elevenlabs": {
+      "enabled": true,
+      "api_key_env": "ELEVENLABS_API_KEY",
+      "note": "Set ELEVENLABS_API_KEY env var or add to ~/.claude/.env"
+    },
+    "openai": {
+      "enabled": true,
+      "api_key_env": "OPENAI_API_KEY",
+      "note": "Set OPENAI_API_KEY env var or add to ~/.claude/.env"
+    },
+    "macos": {
+      "enabled": true,
+      "note": "Built-in macOS TTS, always available as fallback"
+    }
+  },
+  "hooks": {
+    "session_start": {
+      "enabled": true,
+      "speak_announcement": true,
+      "note": "Shows dialog at session start to select TTS provider"
+    },
+    "user_prompt_submit": {
+      "enabled": true,
+      "phrases": [
+        "Roger.", "Copy.", "On it.", "Understood.", "Working on it.",
+        "Got it.", "Affirmative.", "Right away.", "Message received.",
+        "Acknowledged.", "Copy that.", "All systems go."
+      ],
+      "note": "Speaks random acknowledgment when user submits prompt"
+    },
+    "stop": {
+      "enabled": true,
+      "note": "Speaks Claude's response when generation completes"
+    },
+    "pre_compact": {
+      "enabled": true,
+      "announcements": [
+        "Context overflow detected. Initiating memory compaction.",
+        "System reaching capacity. Archiving historical context.",
+        "Memory banks full. Consolidating archived data.",
+        "Cognitive load critical. Initiating context collapse."
+      ],
+      "note": "Announces when context compaction begins"
+    }
+  },
+  "voices": {
+    "assistant": {
+      "kokoro_voice": "bf_emma",
+      "elevenlabs_voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "openai_voice": "onyx",
+      "macos_voice": "Samantha",
+      "speed": 1.1,
+      "volume": 1.0,
+      "note": "Voice for Claude's responses"
+    },
+    "system": {
+      "kokoro_voice": "af_sky",
+      "elevenlabs_voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "openai_voice": "nova",
+      "macos_voice": "Samantha",
+      "speed": 1.2,
+      "volume": 0.8,
+      "note": "Voice for system announcements and acknowledgments"
+    }
+  }
+}

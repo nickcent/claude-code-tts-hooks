@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "session": {
+    "default_mode": "kokoro",
+    "show_dialog": false,
+    "dialog_timeout": 15
+  },
+  "providers": {
+    "kokoro": {
+      "enabled": true
+    },
+    "elevenlabs": {
+      "enabled": false
+    },
+    "openai": {
+      "enabled": false
+    },
+    "macos": {
+      "enabled": true
+    }
+  },
+  "hooks": {
+    "session_start": {
+      "enabled": true,
+      "speak_announcement": true
+    },
+    "user_prompt_submit": {
+      "enabled": true,
+      "phrases": ["Roger.", "Copy.", "On it.", "Got it."]
+    },
+    "stop": {
+      "enabled": true
+    },
+    "pre_compact": {
+      "enabled": true
+    }
+  },
+  "voices": {
+    "assistant": {
+      "kokoro_voice": "bf_emma",
+      "macos_voice": "Samantha",
+      "speed": 1.1
+    },
+    "system": {
+      "kokoro_voice": "af_sky",
+      "macos_voice": "Samantha",
+      "speed": 1.2
+    }
+  }
+}

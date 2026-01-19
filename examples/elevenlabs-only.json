@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "session": {
+    "default_mode": "elevenlabs",
+    "show_dialog": false,
+    "dialog_timeout": 15
+  },
+  "providers": {
+    "kokoro": {
+      "enabled": false
+    },
+    "elevenlabs": {
+      "enabled": true,
+      "note": "Set ELEVENLABS_API_KEY in ~/.claude/.env"
+    },
+    "openai": {
+      "enabled": false
+    },
+    "macos": {
+      "enabled": true
+    }
+  },
+  "hooks": {
+    "session_start": {
+      "enabled": true,
+      "speak_announcement": true
+    },
+    "user_prompt_submit": {
+      "enabled": false,
+      "note": "Disabled to save API credits"
+    },
+    "stop": {
+      "enabled": true
+    },
+    "pre_compact": {
+      "enabled": true
+    }
+  },
+  "voices": {
+    "assistant": {
+      "elevenlabs_voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "macos_voice": "Samantha",
+      "speed": 1.0
+    },
+    "system": {
+      "elevenlabs_voice_id": "EXAVITQu4vr4xnSDxMaL",
+      "macos_voice": "Samantha",
+      "speed": 1.0
+    }
+  }
+}
