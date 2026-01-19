@@ -22,7 +22,7 @@ Add text-to-speech to [Claude Code](https://github.com/anthropics/claude-code) u
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/claude-code-tts-hooks.git
+git clone https://github.com/nickcent/claude-code-tts-hooks.git
 cd claude-code-tts-hooks
 
 # Run the installer
@@ -113,7 +113,7 @@ Edit `~/.claude/hooks/tts_config.json` to customize:
       "speed": 1.1
     },
     "system": {
-      "kokoro_voice": "af_sky",
+      "kokoro_voice": "af_nicole",
       "speed": 1.2
     }
   }
